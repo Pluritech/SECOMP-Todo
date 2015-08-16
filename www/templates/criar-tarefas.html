@@ -1,5 +1,32 @@
 <ion-view view-title="Criar Tarefa">
 	<ion-content class="padding-vertical">
+		
+
+		<div class="padding-horizontal">
+			<ion-list>
+				<ion-item class="item-divider">
+					Criar Tarefa
+				</ion-item>
+				<label class="item item-input">
+					<span class="input-label">Tarefa</span>
+					<input type="text" placeholder="Tarefa" ng-model="tarefa.nome">
+				</label>
+				<label class="item item-input item-select">
+					<div class="input-label">
+						Prioridade
+					</div>
+					<select ng-model="tarefa.prioridade">
+						<option>Baixa</option>
+						<option>Normal</option>
+						<option>Alta</option>
+					</select>
+				</label>
+
+				<button class="button button-positive button-block" ng-click="criarTarefa()" ng-disabled="!tarefa.nome.length"> 
+					Criar
+				</button>
+			</ion-list>
+		</div>
 
 	</ion-content>
 </ion-view>

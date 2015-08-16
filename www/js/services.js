@@ -1,7 +1,12 @@
 angular.module('SecompTodo')
 
 	.factory('Tarefas', function () {
-		return {
 
+		var tarefas = [];
+
+		return {
+			criarTarefa: function (tarefa) {
+				tarefas.push(tarefa);
+			}
 		};
 	});
