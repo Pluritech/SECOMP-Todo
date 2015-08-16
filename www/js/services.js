@@ -11,6 +11,10 @@ angular.module('SecompTodo')
 
 			criarTarefa: function (tarefa) {
 				tarefas.push(tarefa);
+			},
+
+			concluirTarefa: function (tarefa) {
+				tarefa.concluida = true;
 			}
 		};
 	});

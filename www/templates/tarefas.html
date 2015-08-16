@@ -10,8 +10,9 @@
 			<ion-item class="item-divider">
 				Lista de Tarefas
 			</ion-item>
-			<ion-item class="item-icon-left" ng-repeat="tarefa in tarefas track by $index">
-				<i class="icon ion-ios-circle-outline"></i>
+
+			<ion-item class="item-icon-left" ng-repeat="tarefa in tarefas track by $index" ng-click="concluirTarefa(tarefa)">
+				<i class="icon" ng-class="{'ion-ios-checkmark': tarefa.concluida, 'ion-ios-circle-outline': !tarefa.concluida}"></i>
 				<h2> {{tarefa.nome }} </h2>
 				<p> Prioridade: {{ tarefa.prioridade}}</p>
 			</ion-item>

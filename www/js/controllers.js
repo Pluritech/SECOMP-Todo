@@ -5,7 +5,13 @@ angular.module('SecompTodo')
 	})
 	
 	.controller('TarefasCtrl', function ($scope, Tarefas) {
+
 		$scope.tarefas = Tarefas.getTarefas();
+
+		$scope.concluirTarefa = function (tarefa) {
+			Tarefas.concluirTarefa(tarefa);
+		};
+	
 	})
 
 	.controller('CriarTarefasCtrl', function ($scope, $state, Tarefas) {
