@@ -5,6 +5,10 @@ angular.module('SecompTodo')
 		var tarefas = [];
 
 		return {
+			getTarefas: function () {
+				return tarefas;
+			},
+
 			criarTarefa: function (tarefa) {
 				tarefas.push(tarefa);
 			}

@@ -5,7 +5,7 @@ angular.module('SecompTodo')
 	})
 	
 	.controller('TarefasCtrl', function ($scope) {
-
+		$scope.tarefas = Tarefas.getTarefas();
 	})
 
 	.controller('CriarTarefasCtrl', function ($scope, $state, Tarefas) {
