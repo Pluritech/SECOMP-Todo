@@ -7,6 +7,10 @@ angular.module('SecompTodo')
 	.controller('TarefasCtrl', function ($scope, Tarefas) {
 
 		$scope.tarefas = Tarefas.getTarefas();
+		$scope.filtros = {
+			ordenacao: 'Prioridade',
+			mostrar: 'A fazer'
+		};
 
 		$scope.concluirTarefa = function (tarefa) {
 			Tarefas.concluirTarefa(tarefa);
