@@ -6,6 +6,20 @@
 	</ion-nav-buttons>
 
 	<ion-content class="padding-vertical">
-
+		<div class="padding-horizontal">
+			<ion-list>
+				<ion-item class="item-divider">
+					Lista de Tarefas
+				</ion-item>
+				<ion-item class="item-icon-left" ng-repeat="tarefa in tarefas track by $index">
+					<i class="icon ion-ios-circle-outline"></i>
+					<h2> {{tarefa.nome }} </h2>
+					<p> Prioridade: {{ tarefa.prioridade}}</p>
+				</ion-item>
+				<ion-item ng-if="!tarefas.length">
+					Não há tarefas
+				</ion-item>
+			</ion-list>			
+		</div>
 	</ion-content>
 </ion-view>
